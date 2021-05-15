@@ -1,0 +1,252 @@
+body {
+	margin: 0px;
+	font-size: 1em;
+	font-family: montserrat;
+}
+
+/* general */ 
+p{
+	font-size: .9em;
+	color: #1e1e1e;
+	line-height: 2em;
+}
+
+/* p */
+.color-white{
+	color: white;
+}
+h1 {
+	color: white;
+	font-size: 4em;
+	line-height: 1.5em;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+}
+.h2-title{
+	color: white;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+h2{
+	font-size: 1.5em;
+	line-height: 1em;
+	color: #1e1e1e;
+	text-align: center;
+}
+h4{
+	font-size: 1.2em;
+	line-height: 1em;
+	color:#1e1e1e;
+	text-align: center;
+}
+.top-text{
+	font-size: 1em;
+	line-height: 1em;
+	text-align: center;
+	padding-bottom: 20px;
+}
+a {
+	color: #f2b93e;
+}
+.main-menu{
+	color: white;
+	text-decoration: none;
+	font-size: 0.8em;
+}
+
+button{
+	padding: .5em 2em;
+	background-color: #f2b93e; 
+	border: none;
+	font-size: 1em;
+}
+
+/* nav bar */
+
+.hamburger{
+	display: none;
+}
+
+nav {
+	background: #1e1e1e;
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+
+	/* If I am adding padding is moving everything to the right.
+	I wanted to justify-content: space-between and add padding
+	to control the size*/	
+	
+}
+nav ul{
+	display: flex;
+}
+nav ul li{
+	padding: 0 0 0 15px;
+	list-style-type: none;
+}
+nav{
+	color: white;
+}
+
+/* image */
+img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.section-padding {
+	margin-top: 50px;
+}
+/*Header*/
+
+header{
+	width: 100%;
+	height: 100vh;
+	background: url(./assets/carissa-moore-waves.jpg);
+	background-position: 50% 50%;
+  	background-size: cover;
+  	display: flex;
+  	align-items: center;
+}
+.wrapper-content{
+	max-width: 1400px;
+	margin-right: auto;
+  	margin-left: auto;
+	height: center;
+	padding: 5em 5em;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* Section where we are?*/
+.large-paragraph{
+	max-width: 1400px;
+	margin-right: auto;
+  	margin-left: auto;
+	padding: 0 5em 0 5em;
+	column-count: 2;
+}
+
+/* Gallery */
+.grid_gallery_3 {
+	max-width: 1400px;
+	margin-right: auto;
+  	margin-left: auto;
+	padding: 0 5em 0 5em;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-columns: minmax(200px, 1fr);
+	grid-gap: 1em;
+	justify-content: stretch;
+	align-items: stretch;
+}
+.colum-row-4-3 {
+	grid-column: 1/4;
+	grid-row:2/4;
+}
+
+/* Grid Items */
+.img-items{
+	object-fit: cover;
+	height: 15em;
+}
+.grid-items{
+	max-width: 1400px;
+	margin-right: auto;
+  	margin-left: auto;
+	padding: 0 5em 0 5em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-columns: minmax(200px, 1fr);
+	grid-column-gap: 8em;
+	grid-row-gap: 3em;
+	justify-content: stretch;
+	align-items: stretch;
+}
+
+/* footer */
+.wrapper-footer{
+	margin: auto;
+	text-align: center;
+	padding: 1em 0 1em 0;
+}
+
+.section-padding.black{
+	background-color: #1e1e1e;
+}
+
+@media only screen and (max-width: 768px){
+	.grid_gallery_3 {
+		padding: 0 2em 0 2em;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-columns: auto;
+		}
+	.colum-row-4-3 {
+		grid-column: auto;
+		grid-row: auto;
+		}
+	.grid-items{
+		padding: 0 2em 0 2em;
+		grid-template-columns: 1fr;
+		grid-column-gap: 1em;
+		grid-row-gap: 1em;
+	}
+
+	.large-paragraph{
+		padding: 0 2em 0 2em;
+		column-count: 1;
+	}
+	.wrapper-content {
+		padding: 4em;
+	}
+	h1 {
+	font-size: 1.5em;
+	line-height: 1em;
+	}
+
+	.h2-title{
+		color: white;
+		font-size: 1em;
+		line-height: 1em;
+	}
+
+	.hamburger {
+  		position: relative;
+  		display: inline-block;
+	}
+
+	.hamburger-content {
+  		display: none;
+  		position: absolute;
+  		left:0;
+ 		 z-index:1;
+	}
+
+	.hamburger:hover .hamburger-content {
+ 		 display: block;
+		/* animation: popup .5s ease-in-out both; */
+	}
+
+	.hamburger span {
+  		transition: transform .5s;
+		-webkit-transition: -webkit-transform .5s;
+		display: block;
+  		transform: rotate(90deg);
+	}
+
+	.hamburger:hover span {
+  		transition: transform .5s;
+		-webkit-transition: -webkit-transform .5s;
+  		display: inline-block;
+  		transform: rotate(180deg);
+  	}
+  	nav ul {
+  		display: none;
+  	}
+}
